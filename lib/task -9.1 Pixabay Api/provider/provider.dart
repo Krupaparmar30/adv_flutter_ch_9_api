@@ -5,15 +5,46 @@ import 'package:provider/provider.dart';
 
 class PixaApiProvider extends ChangeNotifier{
 
-  PixaApiHelper pixaApiHelper=PixaApiHelper();
-  PixaModal? pixaModal;
-  Future<PixaModal?> fromMap()
-  async {
-    final data= await pixaApiHelper.fetchApiData();
-    pixaModal=PixaModal.fromJson(data);
+ApiHelper apiHelper = ApiHelper();
+PixaBayModal? pixaBayModal;
+  String searchIma='';
+  void getImages(String ima)
+  {
+    searchIma=ima;
     notifyListeners();
-    return pixaModal;
+  }
+
+  Future<PixaBayModal?> fromMap(String ima)
+  async {
+    final data= await apiHelper.fetchApiData(ima);
+    pixaBayModal=PixaBayModal.fromjson(data);
+
+    return pixaBayModal;
 
   }
 
 }
+
+// import 'package:flutter/cupertino.dart';
+//
+// import '../../helper/pixaapi_api_helper/pixaapi_api_helper.dart';
+// import '../modal/modal.dart';
+//
+//
+//
+// class PixabayProvider extends ChangeNotifier {
+//   ApiHelper apiHelper = ApiHelper();
+//   PixaBayModal? pixaBayModal;
+//   String searchImg = '';
+//
+//   void getImages(String img) {
+//     searchImg = img;
+//     notifyListeners();
+//   }
+//
+//   Future<PixaBayModal?> fromMap(String img) async {
+//     final data = await apiHelper.fetchApiData(img);
+//     pixaBayModal = PixaBayModal.fromjson(data);
+//     return pixaBayModal;
+//   }
+// }

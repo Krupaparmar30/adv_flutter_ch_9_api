@@ -1,21 +1,47 @@
 import 'dart:convert';
-
-import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 
-class PixaApiHelper {
-  static String api =
-      "https://pixabay.com/api/?key=45128540-b41d61c399916b725dc169617&q=flower";
+import 'package:http/http.dart' as http;
 
-  Future<Map> fetchApiData() async {
+class ApiHelper {
+
+
+  Future<Map> fetchApiData(String search) async {
+    String api =
+        "https://pixabay.com/api/?key=45138698-8a65ae4d5f3f50f1c159a45fb&q=$search&image_type=photo";
     Uri url = Uri.parse(api);
+
     Response response = await http.get(url);
     if (response.statusCode == 200) {
       final json = response.body;
-      final Map data = jsonDecode(json);
+      Map data = jsonDecode(json);
       return data;
     } else {
       return {};
     }
   }
-}
+ }
+
+// import 'dart:convert';
+//
+// import 'package:http/http.dart';
+// import 'package:http/http.dart' as http;
+// class ApiHelper
+// {
+//
+//   Future<Map> fetchApiData(String search)
+//   async {
+//     String api = "https://pixabay.com/api/?key=45138698-8a65ae4d5f3f50f1c159a45fb&q=$search&image_type=photo";
+//     Uri url = Uri.parse(api);
+//     Response response = await http.get(url);
+//     if(response.statusCode == 200)
+//     {
+//       final json = response.body;
+//       Map data = jsonDecode(json);
+//       return data;
+//     }
+//     else {
+//       return {};
+//     }
+//   }
+// }

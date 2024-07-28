@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => PixaApiProvider(),)
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         routes: {
           '/':(context)=>pixaPage()
         },
