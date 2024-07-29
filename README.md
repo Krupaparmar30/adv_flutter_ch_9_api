@@ -23,6 +23,17 @@ Adding Dependencies:
 
 ## 9.2 Call Pixabay API & Represent in UI.:-
 
+<p>
+  <img src="https://github.com/user-attachments/assets/8fa52424-0bda-4b2b-869c-dbea1bc23dd2"height=28% width=32%>
+    <img src="https://github.com/user-attachments/assets/fe4e5f41-a903-43e8-8399-b8a9a28df02a"height=28% width=32%>
+    <img src="https://github.com/user-attachments/assets/9c270f79-797b-4a47-930c-7a79e097eeaa"height=28% width=32%>
+</p>
+
+
+https://github.com/user-attachments/assets/2e5023b5-c2be-4c85-9b96-c26efbd71bd8
+
+## 9.1 Dummy Json API Calling:-
+
 🍲 Flutter Recipes App 🍽️
 
 * Features : -
@@ -47,16 +58,6 @@ Adding Dependencies:
 
 👉 Provider: State management solution for efficient data handling and UI updates.
 
-<p>
-  <img src="https://github.com/user-attachments/assets/8fa52424-0bda-4b2b-869c-dbea1bc23dd2"height=28% width=32%>
-    <img src="https://github.com/user-attachments/assets/fe4e5f41-a903-43e8-8399-b8a9a28df02a"height=28% width=32%>
-    <img src="https://github.com/user-attachments/assets/9c270f79-797b-4a47-930c-7a79e097eeaa"height=28% width=32%>
-</p>
-
-
-https://github.com/user-attachments/assets/2e5023b5-c2be-4c85-9b96-c26efbd71bd8
-
-## 9.1 Dummy Json API Calling:-
 <p>
   <img src="https://github.com/user-attachments/assets/9203f079-14fd-4f26-ac64-56c022d2ef64"height=28% width=32%>
     <img src="https://github.com/user-attachments/assets/c7ca6e28-848f-48f2-a56c-170df4bcdfaf"height=28% width=32%>
