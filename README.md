@@ -2,6 +2,26 @@
 
 A new Flutter project.
 
+# API (Application Programming Interface):
+
+- **API is a URL that is used to interact with the server.**
+- APIs act as messengers between different software applications.
+
+- **http package
+
+Adding Dependencies:
+* - Ensure you have the `http` and `provider` packages included in your `pubspec.yaml` dependencies:
+    
+    YAML
+    ```bash
+    dependencies:
+    flutter:
+    sdk: flutter
+        http: ^1.3.0
+        provider: ^6.0.x
+  ```
+
+## Call Pixabay API & Represent in UI.:-
 <p>
   <img src="https://github.com/user-attachments/assets/8fa52424-0bda-4b2b-869c-dbea1bc23dd2"height=28% width=32%>
     <img src="https://github.com/user-attachments/assets/fe4e5f41-a903-43e8-8399-b8a9a28df02a"height=28% width=32%>
