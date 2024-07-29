@@ -27,18 +27,17 @@ Adding Dependencies:
 
 * Features : -
 
-Explore a World of Recipes: Browse thousands of recipes curated by our team of food experts. From quick weekday dinners to gourmet delights, you'll find recipes for every occasion and craving.
+👉 Explore a World of Recipes: Browse thousands of recipes curated by our team of food experts. From quick weekday dinners to gourmet delights, you'll find recipes for every occasion and craving.
 
-Personalized Recommendations: Get personalized recipe recommendations based on your taste preferences, dietary restrictions, and past cooking history. Never run out of ideas for what to cook next!
+👉 Personalized Recommendations: Get personalized recipe recommendations based on your taste preferences, dietary restrictions, and past cooking history. Never run out of ideas for what to cook next!
 
-Step-by-Step Cooking Instructions: Follow clear, easy-to-understand instructions for each recipe. Our step-by-step guides ensure that every dish you make turns out perfectly, every time.
+👉 Step-by-Step Cooking Instructions: Follow clear, easy-to-understand instructions for each recipe. Our step-by-step guides ensure that every dish you make turns out perfectly, every time.
 
-Shopping List: Create a shopping list directly from any recipe. Check off ingredients as you shop, making grocery trips efficient and stress-free.
+👉 Shopping List: Create a shopping list directly from any recipe. Check off ingredients as you shop, making grocery trips efficient and stress-free.
 
+👉 Cooking Community: Join a vibrant community of food enthusiasts. Share your own recipes, tips, and photos of your culinary creations. Connect with other users and learn from their experiences.
 
-Cooking Community: Join a vibrant community of food enthusiasts. Share your own recipes, tips, and photos of your culinary creations. Connect with other users and learn from their experiences.
-
-Ingredient Substitutions: Discover suitable substitutions for ingredients you may not have on hand. Cook with confidence knowing you can adapt recipes to fit what you have available.
+👉 Ingredient Substitutions: Discover suitable substitutions for ingredients you may not have on hand. Cook with confidence knowing you can adapt recipes to fit what you have available.
 
 <p>
   <img src="https://github.com/user-attachments/assets/8fa52424-0bda-4b2b-869c-dbea1bc23dd2"height=28% width=32%>
