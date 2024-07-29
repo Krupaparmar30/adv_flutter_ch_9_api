@@ -79,3 +79,11 @@ https://github.com/user-attachments/assets/09b09996-4f9b-46e8-aea9-4bdb944041fb
 👉 Compare Prices: Easily compare prices across different stores to ensure you're getting the best deal. Save time and money by finding the lowest prices for the products you love.
 
 👉 Shopping Cart: Add products to the shopping cart for a streamlined checkout experience.
+
+* Technologies Used:
+  
+👉 Flutter: Utilized for developing a high-performance, cross-platform UI.
+
+👉 Dart: The primary programming language for Flutter development. cloud storage, and real-time database (optional).
+
+👉 Provider: State management solution for efficient data handling and UI updates.
