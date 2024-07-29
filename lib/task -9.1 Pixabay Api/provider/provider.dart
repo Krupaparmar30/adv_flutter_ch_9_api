@@ -25,26 +25,4 @@ PixaBayModal? pixaBayModal;
 
 }
 
-// import 'package:flutter/cupertino.dart';
-//
-// import '../../helper/pixaapi_api_helper/pixaapi_api_helper.dart';
-// import '../modal/modal.dart';
-//
-//
-//
-// class PixabayProvider extends ChangeNotifier {
-//   ApiHelper apiHelper = ApiHelper();
-//   PixaBayModal? pixaBayModal;
-//   String searchImg = '';
-//
-//   void getImages(String img) {
-//     searchImg = img;
-//     notifyListeners();
-//   }
-//
-//   Future<PixaBayModal?> fromMap(String img) async {
-//     final data = await apiHelper.fetchApiData(img);
-//     pixaBayModal = PixaBayModal.fromjson(data);
-//     return pixaBayModal;
-//   }
-// }
+
