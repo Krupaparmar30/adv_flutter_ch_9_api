@@ -70,3 +70,12 @@ https://github.com/user-attachments/assets/2e5023b5-c2be-4c85-9b96-c26efbd71bd8
 
 https://github.com/user-attachments/assets/09b09996-4f9b-46e8-aea9-4bdb944041fb
 
+🎁 Flutter Product App 🛍️
+
+* Features : -
+  
+👉 Personalized Recommendations: Receive tailored product recommendations based on your browsing history and preferences. Discover new items that match your interests and style.
+
+👉 Compare Prices: Easily compare prices across different stores to ensure you're getting the best deal. Save time and money by finding the lowest prices for the products you love.
+
+👉 Shopping Cart: Add products to the shopping cart for a streamlined checkout experience.
