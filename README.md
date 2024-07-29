@@ -39,6 +39,11 @@ Adding Dependencies:
 
 👉 Ingredient Substitutions: Discover suitable substitutions for ingredients you may not have on hand. Cook with confidence knowing you can adapt recipes to fit what you have available.
 
+* Technologies Used:
+👉 Flutter: Utilized for developing a high-performance, cross-platform UI.
+👉 Dart: The primary programming language for Flutter development. cloud storage, and real-time database (optional).
+👉 Provider: State management solution for efficient data handling and UI updates.
+
 <p>
   <img src="https://github.com/user-attachments/assets/8fa52424-0bda-4b2b-869c-dbea1bc23dd2"height=28% width=32%>
     <img src="https://github.com/user-attachments/assets/fe4e5f41-a903-43e8-8399-b8a9a28df02a"height=28% width=32%>
