@@ -12,4 +12,8 @@ class ProductApiProvider extends ChangeNotifier {
     productModal = ProductModal.fromJson(data);
     return productModal;
   }
+
+  void removeqty(int index) {}
+
+  void addQty(int index) {}
 }

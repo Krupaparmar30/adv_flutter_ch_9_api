@@ -1,7 +1,8 @@
-import 'package:adv_flutter_ch_9/task%20-%209.2%20-Dummy%20Api/Dummy_products_api/modal/product_api_modal.dart';
-import 'package:adv_flutter_ch_9/task%20-%209.2%20-Dummy%20Api/Dummy_products_api/provider/product_api_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../../modal/product_api_modal.dart';
+import '../../provider/product_api_provider.dart';
 
 class productApiHomePage extends StatelessWidget {
   const productApiHomePage({super.key});
@@ -33,7 +34,7 @@ class productApiHomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black,
+                        color: Colors.grey.shade100,
                         spreadRadius: 2,
                         blurRadius: 2,
                         offset: Offset(0, 2),
@@ -52,16 +53,16 @@ class productApiHomePage extends StatelessWidget {
                   if (snapShot.hasData) {
                     ProductModal? pro = snapShot.data;
                     return ListView.builder(
-                        itemCount: pro!.products.length,
+                        itemCount:  pro!.products.length,
                         itemBuilder: (context, index) => Row(
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: GestureDetector(
-                                    onDoubleTap: () {
-                                      selIndex = index;
-                                      Navigator.of(context)
-                                          .pushNamed('/la');
+                                    onTap: () {
+                                      selIndex=index
+                                      ;
+                                      Navigator.of(context).pushNamed('/sec');
                                     },
                                     child: Container(
                                       height: height * 0.220,
@@ -80,10 +81,12 @@ class productApiHomePage extends StatelessWidget {
                                           image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: NetworkImage(
-                                                  productApiProviderTrue
-                                                      .productModal!
-                                                      .products[index]
-                                                      .thumbnail))),
+                                                  // productApiProviderTrue
+                                                  //     .productModal!
+                                                  //     .products[index]
+                                                  //     .thumbnail
+                                                  pro.products[index].thumbnail
+                                              ))),
                                     ),
                                   ),
                                 ),
@@ -100,19 +103,18 @@ class productApiHomePage extends StatelessWidget {
                                         SizedBox(
                                           height: height * 0.010,
                                         ),
-                                        Row(
-                                          children: [
-                                            Text(
-                                              productApiProviderTrue
-                                                  .productModal!
-                                                  .products[index]
-                                                  .title,
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.w600,
-                                                fontSize: 14,
-                                              ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(right: 20),
+                                          child: Text(
+                                            productApiProviderTrue
+                                                .productModal!
+                                                .products[index]
+                                                .title,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 14,
                                             ),
-                                          ],
+                                          ),
                                         ),
                                         SizedBox(
                                           height: height * 0.010,
