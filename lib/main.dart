@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(create: (context) => RecepiesApiProvider()),
         ChangeNotifierProvider(create: (context) => ProductApiProvider()),
-        ChangeNotifierProvider(create: (context) => CartProvider())
+        ChangeNotifierProvider(create: (context) => CartApiProdcutProvider())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

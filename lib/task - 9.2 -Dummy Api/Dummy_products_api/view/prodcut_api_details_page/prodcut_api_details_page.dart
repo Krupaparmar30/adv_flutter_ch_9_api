@@ -17,9 +17,9 @@ class productDeatilsPage extends StatelessWidget {
         Provider.of<ProductApiProvider>(context, listen: false);
     ProductApiProvider productApiProviderTrue =
         Provider.of<ProductApiProvider>(context, listen: true);
-    CartProvider cartApiProdcutProvider = Provider.of(context);
     return Scaffold(
       appBar: AppBar(
+
         backgroundColor: Colors.grey.shade100,
         title: Text('Details Screen'),
       ),
@@ -41,10 +41,11 @@ class productDeatilsPage extends StatelessWidget {
                         height: height * 0.3,
                         width: width * 0.6,
                         decoration: BoxDecoration(
+                          color:Colors.white,
                             borderRadius: BorderRadius.circular(10),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black,
+                                color: Colors.grey,
                                 spreadRadius: 2,
                                 blurRadius: 2,
                                 offset: Offset(0, 2),
@@ -280,15 +281,11 @@ class productDeatilsPage extends StatelessWidget {
                                 onPressed: () {
                                   cartList.add(productApiProviderFalse
                                       .productModal!.products[selIndex]);
-                                  for (int i = 0;
-                                      i <
-                                          productApiProviderFalse
-                                              .productModal!.products.length;
-                                      i++) {
+                                  for (int i = 0; i < productApiProviderFalse.productModal!.products.length; i++) {
+
                                     qty.add(selIndex);
                                   }
-                                  cartApiProdcutProvider.discountedPrice();
-                                  cartApiProdcutProvider.totalPrice();
+
                                   Navigator.pushNamed(context, '/cart');
                                 },
                                 style: ElevatedButton.styleFrom(

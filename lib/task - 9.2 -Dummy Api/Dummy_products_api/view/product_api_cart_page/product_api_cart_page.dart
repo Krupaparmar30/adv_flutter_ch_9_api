@@ -13,7 +13,9 @@ class productApiCartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    CartProvider cartProvider = Provider.of(context, listen: false);
+    CartApiProdcutProvider cartProviderFalse = Provider.of(context, listen: false);
+    CartApiProdcutProvider cartProviderTrue = Provider.of(context, listen: true);
+
     ProductApiProvider productApiProviderFalse =
         Provider.of<ProductApiProvider>(context, listen: false);
     ProductApiProvider productApiProviderTrue =
@@ -24,13 +26,17 @@ class productApiCartPage extends StatelessWidget {
     //   }
     // };
     return Scaffold(
-      body:
-      Column(
+      appBar: AppBar(
+        title: Text('Cart Page'),
+        centerTitle: true,
+      ),
+      body: Column(
+
         children: [
+
           SizedBox(
             height: height * 0.020,
           ),
-
           Expanded(
             flex: 2,
             child: FutureBuilder(
@@ -42,117 +48,168 @@ class productApiCartPage extends StatelessWidget {
                     children: [
                       ...List.generate(
                         cartList.length,
-                        (index) => Center(
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                height: height * 0.020,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 20),
-                                child: Container(
-                                  height: height * 0.250,
-                                  width: width * 0.5,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.grey.shade600,
-                                          spreadRadius: 2,
-                                          blurRadius: 2,
-                                          offset: Offset(0, 2),
-                                        )
-                                      ],
-                                      image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image: NetworkImage(
-                                            cartList[index].thumbnail),
-                                      )),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 35),
-                                child: Container(
-                                  height: height * 0.3,
-                                  width: width * 0.5,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.grey.shade100,
-                                        spreadRadius: 2,
-                                        blurRadius: 2,
-                                        offset: Offset(0, 2),
-                                      )
-                                    ],
-                                  ),
-                                  child: Column(
+                        (index) => Padding(
+                          padding: const EdgeInsets.only(top: 10,left: 10,right:0,bottom: 15),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.grey.shade50,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black,
+                                  offset: Offset(0,2)
+                                    ,
+                                  blurRadius: 2,spreadRadius: 2
+                                )
+                              ]
+
+                            ),
+                            child: Center(
+                              child: Column(
+                                children: [
+                                  Column(
                                     children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          cartList[index].title,
-                                          style: TextStyle(fontSize: 16),
-                                        ),
-                                      ),
                                       Row(
                                         children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text("Price :"),
+                                          SizedBox(
+                                            height: height * 0.020,
                                           ),
                                           Padding(
-                                            padding: const EdgeInsets.all(6.0),
-                                            child: Text(cartList[index]
-                                                .price
-                                                .toString()),
-                                          )
-                                        ],
-                                      ),
-                                      Container(
-                                        height: height * 0.05,
-                                        width: width * 0.2,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                        ),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            GestureDetector(
-                                              onTap: () {
-                                                cartProvider.removeFromCart(index);
-                                              },
-                                              child: Container(
-                                                padding:
-                                                    const EdgeInsets.all(5),
-                                                decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(5),
-                                                  color: Colors.grey.shade200,
-                                                ),
-                                                child: Icon(Icons.remove,
-                                                    size: 16),
+                                            padding: const EdgeInsets.only(top: 20),
+                                            child: Container(
+                                              height: height * 0.250,
+                                              width: width * 0.470,
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      spreadRadius: 2,
+                                                      blurRadius: 2,
+                                                      offset: Offset(0, 2),
+                                                    )
+                                                  ],
+                                                  image: DecorationImage(
+                                                    fit: BoxFit.cover,
+                                                    image: NetworkImage(
+                                                        cartList[index].thumbnail),
+                                                  )),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(top: 35),
+                                            child: Container(
+                                              height: height * 0.230,
+                                              width: width * 0.5,
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(10),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey.shade50,
+                                                    spreadRadius: 2,
+                                                    blurRadius: 2,
+                                                    offset: Offset(0, 2),
+                                                  )
+                                                ],
+                                              ),
+                                              child: Column(
+                                                children: [
+                                                  Padding(
+                                                    padding: const EdgeInsets.all(8.0),
+                                                    child: Text(
+                                                      cartList[index].title,
+                                                      style: TextStyle(fontSize: 16),
+                                                    ),
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Padding(
+                                                        padding: const EdgeInsets.all(8.0),
+                                                        child: Text("Price :"),
+                                                      ),
+                                                      SizedBox(
+                                                        width: width * 0.2,
+                                                        child: Text(
+                                                          '\$${cartList[index].price}',
+                                                          style: const TextStyle(
+                                                            fontSize: 18,
+                                                            fontWeight: FontWeight.bold,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Padding(
+                                                    padding: const EdgeInsets.only(right: 50),
+                                                    child: Container(
+                                                      height: height * 0.05,
+                                                      width: width * 0.560,
+                                                      decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius.circular(10),
+                                                        color: Colors.white
+                                                      ),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment.spaceEvenly,
+                                                        children: [
+                                                          GestureDetector(
+                                                            onTap: () {
+                                                              cartProviderFalse.removeQty(index);
+
+                                                            },
+                                                            child: Container(
+
+
+                                                              decoration: BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius.circular(5),
+                                                                color: Colors.white,
+                                                              ),
+                                                              child: Padding(
+                                                                padding: const EdgeInsets.only(right:5),
+                                                                child: Icon(Icons.remove,
+                                                                    size: 16),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding: const EdgeInsets.only(right:0),
+                                                            child: Text(qty[index].toString()),
+                                                          ),
+                                                          IconButton(
+                                                            onPressed: () {
+                                                              cartProviderFalse.addQty(index);
+
+                                                            },
+                                                            icon: Icon(Icons.add,
+                                                                color: Colors.red),
+                                                          ),
+                                                          IconButton(
+                                                            onPressed: () {
+                                                              cartProviderFalse.removeFromCart(index);
+
+                                                            },
+                                                            icon: Icon(Icons.delete,
+                                                                color: Colors.red),
+                                                          ),
+
+                                                        ],
+                                                      ),
+
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
                                             ),
-                                            Text(qty[index].toString()),
+                                          ),
 
-                                            IconButton(
-                                              onPressed: () {
-                                                cartProvider.removeFromCart(index);
-                                              },
-                                              icon: Icon(Icons.delete, color: Colors.red),
-                                            ),
-                                          ],
-                                        ),
+                                        ],
                                       ),
-
                                     ],
                                   ),
-                                ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
                       ),
