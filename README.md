@@ -1,4 +1,3 @@
-![prod3](https://github.com/user-attachments/assets/b1b72f37-f8b9-41d9-bcce-5a8379c7fa5c)# adv_flutter_ch_9
 
 A new Flutter project.
 
